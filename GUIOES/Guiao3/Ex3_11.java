@@ -12,7 +12,10 @@ public class Ex3_11 {
 			num = reader.nextInt();
 			if(num == 0) break; //não contar o sentinela
 			
+			if(num == 1) isImpar = false;
 			if(num % 2 == 0) isImpar = false;
+			else if(num % 3 == 0) isImpar = false;
+			else if(num % 5 == 0) isImpar = false;
 		}
 		
 		if(isImpar == false) System.out.print("A sequência de números não é exclusivamente constituída por números ímpares");
