@@ -5,23 +5,19 @@ public class Ex3_11 {
 		Scanner reader = new Scanner(System.in);
 		
 		int num = 1;
-		boolean isImpar = true;
+		boolean isPrime = true;
 		
 		while(num != 0){
 			System.out.print("Introduza um numero: ");
 			num = reader.nextInt();
 			if(num == 0) break; //não contar o sentinela
-			
-			if(num == 1) isImpar = true;
-			else if(num == 2) isImpar = true;
-			else if(num == 3) isImpar = true;
-			else if(num % 2 == 0) isImpar = false;
-			else if(num % 3 == 0) isImpar = false;
-			else if(num % 5 == 0) isImpar = false;
+			if(num != 1 && num != 2 && num != 3 && num != 5){
+				if(num % 2 == 0) isPrime = false;
+				else if(num % 3 == 0) isPrime = false;
+				else if(num % 5 == 0) isPrime = false;
+			}
 		}
-		
-		if(isImpar == false) System.out.print("A sequência de números não é exclusivamente constituída por números ímpares");
+		if(isPrime == false) System.out.print("A sequência de números não é exclusivamente constituída por números ímpares");
 		else System.out.print("A sequência de números é exclusivamente constituída por números ímpares");
 	}
 }
-
